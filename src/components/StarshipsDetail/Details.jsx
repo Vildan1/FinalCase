@@ -61,7 +61,7 @@ const Details = ({ id }) => {
   }
   return (
     <section className='starshipDetails'>
-      
+
       <div className='starshipDetailsMain'>
         <div className='container starshipDetailsContainer'>
           <div className='starshipsDetailsContent grid'>
@@ -74,7 +74,7 @@ const Details = ({ id }) => {
             </div>
 
             <div className='starshipsDetailsImg'>
-              <img src={Detailspng} alt='cover img' />
+              <img src='https://media.tenor.com/ZDwnfxYDP04AAAAC/104th-venator.gif' alt='cover img' />
             </div>
             <div className='model-details'>
               <div className='starshipsDetailsInfo'>

@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useInfiniteQuery } from "react-query";
 import React, { useState, useContext, useEffect, useCallback } from "react";
-
 const AppContext = React.createContext();
 const BASE_URL = "https://swapi.dev/api/starships/";
 
@@ -17,7 +16,7 @@ const AppProvider = ({ children }) => {
         const response = await axios.get(
           `${BASE_URL}?search=${searchTerm}&page=${pageParam}`
         );
-        const {  next, results } = response.data;
+        const { next, results } = response.data;
 
         const newStarShip = results.map((ship) => {
           const {
@@ -44,15 +43,12 @@ const AppProvider = ({ children }) => {
             cargo_capacity: cargo_capacity,
           };
         });
-        
+
         if (newStarShip.length > 0) {
           setResultTitle("");
-        } 
-       
-        else {
+        } else {
           setResultTitle("No Search Result Found!");
         }
-
 
         setLoading(false);
         return { newStarShip, next };
@@ -72,7 +68,7 @@ const AppProvider = ({ children }) => {
     hasNextPage,
     isFetching,
     isFetchingNextPage,
-   
+
   } = useInfiniteQuery(["starships", searchTerm], fetchStarShips, {
     getNextPageParam: (lastPage, allPages) => {
       if (lastPage.newStarShip.length === 0) {
@@ -82,7 +78,7 @@ const AppProvider = ({ children }) => {
       }
     },
     refetchOnWindowFocus: true, // sayfa fokusu değiştiğinde sayfayı otomatik olarak yenile
-  });
+  });
 
   const starShips = data
     ? data.pages.map((page) => page.newStarShip).flat()

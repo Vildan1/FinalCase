@@ -27,7 +27,7 @@ const StarshipsList = () => {
   } = useGlobalContext();
 
   if (loading) return <Loading />;
-  
+
 
   return (
     <section className='starships'>
