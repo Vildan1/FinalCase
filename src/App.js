@@ -40,6 +40,9 @@ const App = () => {
     return () => clearTimeout(timer);
   }, []);
   
+  if (loading) {
+    return <LoadingScreen />;
+  }
   return (
     <QueryClientProvider client={queryClient}>
       <AppProvider>
