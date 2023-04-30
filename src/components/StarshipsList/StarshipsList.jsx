@@ -7,15 +7,15 @@ import { animateScroll as scroll } from "react-scroll";
 
 const StarshipsList = () => {
 
-  // Kaydırma animasyonu
+  // Scroll animation
   function scrollToBottom() {
     scroll.scrollToBottom({
-      duration: 500, // Animasyon süresi
-      delay: 0, // Animasyon gecikmesi
-      smooth: "easeInOutQuart", // Animasyon tipi
+      duration: 500, 
+      delay: 0, 
+      smooth: "easeInOutQuart", 
     });
   }
-  //  "useGlobalContext" kancasını kullanarak genel bağlamdan veri ve durum değerlerini alıyorum.
+  //  "I'm getting the data and state values from the global context using the hook "useGlobalContext".
   const {
     starShips,
     loading,
@@ -49,7 +49,7 @@ const StarshipsList = () => {
             className="loadMoreBtn"
             onClick={() => {
               fetchNextPage();
-              scrollToBottom(); // Kaydırma animasyonunu tetikle
+              scrollToBottom(); // Trigger scroll animation
             }}
             disabled={!hasNextPage || isFetchingNextPage}
           >

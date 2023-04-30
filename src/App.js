@@ -10,7 +10,7 @@ import LoadingScreen from './components/Loader/LoadingScreen';
 import NotFound from './pages/NotFound/NotFound';
 import Modal from 'react-modal';
 
-Modal.setAppElement('#root'); // App element olarak root elementini kullanıyoruz
+Modal.setAppElement('#root'); // required for modal
 
 const App = () => {
   const queryClient = new QueryClient();
@@ -51,7 +51,6 @@ const App = () => {
             <Route path="/notfound" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
-        {/* LoadingScreen bileşenini burada çağırıyoruz */}
       </AppProvider>
     </QueryClientProvider>
   );

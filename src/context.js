@@ -14,7 +14,7 @@ const AppProvider = ({ children }) => {
     async ({ pageParam = 1 }) => {
       setLoading(true);
       try {
-        // Veriler, axios kitaplığı kullanılarak alınır .
+        // The data is retrieved using the axios library.
         const response = await axios.get(
           `${BASE_URL}?search=${searchTerm}&page=${pageParam}`
         );
@@ -62,7 +62,7 @@ const AppProvider = ({ children }) => {
     },
     [searchTerm]
   );
-//  tepki sorgulama kitaplığından useInfiniteQuery kancası kullanılarak sayfalandırılır.
+//  It is paginated using the useInfiniteQuery hook from the react query library.
   const {
     data,
     error,
@@ -79,7 +79,7 @@ const AppProvider = ({ children }) => {
         return lastPage.next;
       }
     },
-    refetchOnWindowFocus: true, // sayfa fokusu değiştiğinde sayfayı otomatik olarak yenile
+    refetchOnWindowFocus: true, // Automatically refresh the page when the page focus changes
   });
 
   const starShips = data
@@ -112,7 +112,7 @@ const AppProvider = ({ children }) => {
     </AppContext.Provider>
   );
 };
- // useGlobalContext kancası kullanılarak AppContext içeriği alınır.
+ // AppContext content is retrieved using the useGlobalContext hook.
 export const useGlobalContext = () => {
   return useContext(AppContext);
 };

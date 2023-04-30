@@ -8,9 +8,7 @@ const Starships = ({ item }) => {
   
   const [isModalOpen, setIsModalOpen] = useState(false);
   
-  useEffect(() => {
-    console.log(item, 'item')
-  }, []);
+
 
  // handleOpenModal and handleCloseModal are used to open and close the modal
   const handleOpenModal = (event) => {

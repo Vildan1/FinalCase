@@ -8,7 +8,7 @@ const Search = () => {
 
   useEffect(() => searchText.current.focus(), []);
 
-  // Form submit edildiğinde tetiklenir ve arama yapar 
+  // Triggers and searches when the form is submitted 
   const handleSubmit = (e) => {
     e.preventDefault();
     const tempSearchTerm = searchText.current.value.trim();
@@ -23,8 +23,8 @@ const Search = () => {
 
     }
 
-    //  "useGlobalContext" kancası aracılığıyla üst bileşenden aktarılan bir işlev olan "fetchNextPage" işlevini de çağırır.
-    // Bu işlev, arama sonuçlarının bir sonraki sayfasını getirmekten sorumludur.
+    // also calls the "fetchNextPage" function, a function passed from the parent component via the "useGlobalContext" hook.
+     // This function is responsible for fetching the next page of search results.
     fetchNextPage();
     
   };
