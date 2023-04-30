@@ -1,0 +1,72 @@
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  background: url('../../images/darth-vader.png') center center no-repeat;
+  background-size: cover;
+}
+
+.darth-vader-img {
+  width: 300px;
+  margin-bottom: 2rem;
+}
+
+.titleNot {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.cta:hover {
+  background-color: #fff;
+  color: #000;
+}
+@keyframes darth-vader-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.darth-vader-img {
+  animation-name: darth-vader-animation;
+  animation-duration: 2s;
+  animation-delay: 8s;
+}
+@keyframes starwars-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.not-found-container {
+  animation-name: starwars-animation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}

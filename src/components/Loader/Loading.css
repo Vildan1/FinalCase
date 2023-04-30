@@ -1,0 +1,53 @@
+.loading-screen {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out; /* animasyonlu geçiş */
+    background-color: #fff; /* arka plan rengi ekle */
+  }
+  
+  .loading-screen.hidden {
+    opacity: 0; /* animasyonlu değişiklik */
+    pointer-events: none; /* tıklamayı engelle */
+  }
+  
+  
+  .loading-img-container {
+    position: relative;
+    width: 100%; /* genişliği ayarla */
+    height: 100%; /* yüksekliği ayarla */
+  }
+  
+  .loading-img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+  
+  .loading-img-container p {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color:  rgb(255, 39, 39);
+    text-shadow: 2px 2px #333;
+  }
+  
+
+
+
+
+  

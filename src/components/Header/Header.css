@@ -1,0 +1,39 @@
+
+  .header-content{
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-title{
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.header-text{
+    max-width: 770px;
+}
+.header-img{
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: auto;
+    
+}
+
+
+  @media screen and (max-width: 768px) {
+    .header-coverImg{
+        width: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+  }

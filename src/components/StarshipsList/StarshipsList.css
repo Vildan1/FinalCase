@@ -1,0 +1,331 @@
+.book-details {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 3px solid #000000;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px 0px;
+  transition: var(--transition);
+}
+
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.load-more-button {
+  background-color: #fff;
+  border: 1px solid #007bff;
+  border-radius: 0.25rem;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.375rem 0.75rem;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.load-more-button:hover {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.load-more-button:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 60px;
+  left: 135px;
+  color: #ffffff;
+  background-color: #4e349c;
+  border: none;
+  margin: 5px;
+  padding: 5px 5px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+.modal-back-button{
+   border-radius: 15px;
+    background-color: #4e349c;
+    color: #fff;
+  
+}
+.modal-header-button{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.starshipsContent{
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+
+.starshipsItem {
+  padding-bottom: 8px;
+  border-radius: 34px;
+  color: #fff;
+  background-color: #0d0525;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px 0px;
+  transition: all 0.3s ease-in-out;
+  width: auto;
+  min-height: 300px;
+}
+
+
+.starshipsItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px #f9c244;
+}
+
+.starshipsItemImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.text-capitalize {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.starshipsName {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.starshipsItemInfo {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.starshipsItemInfoItem.title a {
+  text-decoration: none;
+
+}
+
+
+.starshipsItemInfoItem.title {
+  line-height: 1.4;
+  margin-bottom: 4px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+
+}
+
+.starshipsItemInfoItem.title:hover {
+  cursor: pointer;
+
+}
+
+.starshipsItemInfoItem.author {
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.starshipsItemInfoItem span:last-child {
+  opacity: 0.8;
+}
+
+
+.text-item {
+  font-size: 14px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.modal {
+  width: 80%;
+  background: linear-gradient(to bottom right, #33212a, #10052a);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px 0px;
+  transition: var(--transition);
+  display: flex;
+  justify-content: center;
+
+}
+
+.modal-content {
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+
+}
+
+.modal-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: capitalize;
+  color: #f9c244;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.modal-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-img {
+  flex-basis: 50%;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.modal-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.modal-text {
+  flex-basis: 50%;
+}
+
+.modal-text p {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* load more button */
+.mainButton {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.loadMoreBtn {
+  background-color: #f9c244;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.loadMoreBtn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+.loadMoreBtn:hover::before {
+  width: 400px;
+  height: 400px;
+  opacity: 0;
+}
+
+.loadMoreBtn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0) 70%),
+    radial-gradient(ellipse at center,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0) 70%),
+    radial-gradient(ellipse at center,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0) 70%),
+    radial-gradient(ellipse at center,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0) 70%),
+    radial-gradient(ellipse at center,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0) 70%);
+  background-size: 10px 10px;
+  animation: spin 3s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+@media screen and (min-width: 992px) {
+
+
+
+  .starshipsContent{
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+
+}

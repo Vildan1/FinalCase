@@ -1,0 +1,37 @@
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader-half-circle {
+  width: 20px;
+  height: 10px;
+  border-radius: 0 10px 10px 0;
+  background-color: #f9c244;
+  transform: rotate(-45deg);
+  animation: loader 1s ease-in-out infinite;
+}
+
+.loader-half-circle:nth-child(2) {
+  transform: rotate(45deg);
+  animation-delay: 0.2s;
+}
+
+.loader-half-circle:nth-child(3) {
+  transform: rotate(135deg);
+  animation-delay: 0.4s;
+}
+
+@keyframes loader {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}

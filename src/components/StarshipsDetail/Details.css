@@ -1,0 +1,165 @@
+.details-main{
+    background-color: aliceblue;
+    border-radius: 15px;
+    
+
+}
+.starshipDetailsMain{
+    background-color: #000;
+    padding: 8px;
+    border-radius: 15px;
+}
+.starshipDetailsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+}
+.book-details-content {
+    gap: 4rem;
+}
+
+.booklist-content {
+    padding: 10px;
+}
+
+.starshipsDetailsImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+}
+.starshipsDetailsName.title {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .starshipsDetailsName.title span {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    font-size: 28px;
+  }
+
+  .modal-underline {
+    position: absolute;
+    
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% + 10px); /* Add some extra width to ensure the line extends beyond the text */
+    border-bottom: 1px solid rgb(160, 126, 191);;
+  }
+  .model{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .model-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 50px;
+  }
+.image-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 2rem;
+    width: 100%;
+}
+
+.starshipsDetailsImg img {
+    border-radius: 10px;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 11px 14px 9px rgba(0, 0, 0, 0.3), 6px 20px 5px rgba(0, 0, 0, 0.3), 3px 8px 9px rgba(0, 0, 0, 0.3), 11px 14px 9px rgba(0, 0, 0, 0.3), -6px -20px 5px rgba(0, 0, 0, 0.3), -3px -8px 9px rgba(0, 0, 0, 0.3) !important;
+  }
+  
+
+.starshipsDetailsItem {
+    margin-bottom: 12px;
+
+    color: rgb(160, 126, 191);
+}
+
+.model-text {
+    font-weight: 700;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.starshipsDetailsName {
+
+    font-size: 24px;
+    flex-direction: column;
+    color: rgb(160, 126, 191);
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.starshipsDetailsName span {
+    padding-bottom: 10px;
+}
+
+.starshipsDetailsItem.description {
+    opacity: 0.8;
+}
+
+.starshipsDetailsInfo {
+    max-height: 600px;
+    padding: 12px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 12px;
+}
+
+.starshipsDetailsInfo::-webkit-scrollbar {
+    width: 8px;
+}
+
+.starshipsDetailsInfo::-webkit-scrollbar-track {
+    border-radius: 8px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.starshipsDetailsInfo::-webkit-scrollbar-thumb {
+    background-color: #f9c244;
+    outline: -1px solid slategray;
+    border-radius: 8px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .starshipsDetailsContent {
+        grid-template-columns: 50% 50%;
+        gap: 0
+    }
+
+   
+
+    .starshipsDetailsImg img {
+        max-width: 100%;
+    }
+}

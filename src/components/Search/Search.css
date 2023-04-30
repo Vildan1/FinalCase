@@ -1,0 +1,113 @@
+.search-form {
+  width: 100%;
+  height: 60px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.search-form-elem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 20px;
+  background-color: #491a1d;
+  border: 1px solid #ffffff;
+  border-radius: 48px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 20px;
+  border-radius: 48px;
+  width: auto;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 48px;
+
+}
+
+.searchText {
+  color: #fff;
+  width: 150px;
+  font-size: 16px;
+  font-weight: 100;
+  margin-right: 10px;
+  text-align: center;
+
+  
+}
+.underline{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+   /* Add some extra width to ensure the line extends beyond the text */
+ 
+}
+.search-underline {
+  bottom: 0;
+  width: calc(100% + 10px); 
+  border-bottom: 1px solid #f9c244;;
+  padding-bottom: 10px;
+}
+
+.search-form-elem .form-control {
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #fff;
+  max-width: 400px;
+  outline: none;
+  background-color: #491a1d;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.submitButton {
+  align-items: center;
+  border-radius: 48px;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  padding: 10px 24px;
+  margin-left: 6px;
+  background-color: rgb(27, 83, 98);
+  display: flex;
+  width: 100px;
+  font-size: 12px;
+  justify-content: center;
+}
+
+.submitButton:hover {
+  color: rgb(0, 0, 0);
+}
+
+.search-form-elem .form-control::placeholder {
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 968px) {
+    
+  .form-underline {
+   
+    width: 300px;
+  }
+  
+
+}
+@media screen and (min-width: 468px) {
+    
+  .form-underline {
+   
+    width: 300px;
+  }
+  
+
+}
+
