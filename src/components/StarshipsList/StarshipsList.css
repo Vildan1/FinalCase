@@ -183,6 +183,7 @@
   transition: var(--transition);
   display: flex;
   justify-content: center;
+  padding: 20px 0;
 
 }
 .starshipsList{

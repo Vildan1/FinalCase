@@ -8,6 +8,9 @@ import Home from './pages/Home/Home';
 import List from './components/StarshipsList/StarshipsList';
 import LoadingScreen from './components/Loader/LoadingScreen';
 import NotFound from './pages/NotFound/NotFound';
+import Modal from 'react-modal';
+
+Modal.setAppElement('#root'); // App element olarak root elementini kullanıyoruz
 
 const App = () => {
   const queryClient = new QueryClient();
@@ -16,14 +19,16 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000); // 2 saniye gecikme
+    }, 2000); // 10 saniye gecikme
     return () => clearTimeout(timer);
   }, []);
+  if (loading) {
+    return <LoadingScreen />;
+  }
 
   return (
     <QueryClientProvider client={queryClient}>
       <AppProvider>
-        {loading && <LoadingScreen />} {/* LoadingScreen bileşenini burada çağırıyoruz */}
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -31,9 +36,12 @@ const App = () => {
             <Route path="/notfound" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
+        {/* LoadingScreen bileşenini burada çağırıyoruz */}
       </AppProvider>
     </QueryClientProvider>
   );
 };
+
+
 
 export default App;
