@@ -9,8 +9,6 @@ import List from './components/StarshipsList/StarshipsList';
 import LoadingScreen from './components/Loader/LoadingScreen';
 import NotFound from './pages/NotFound/NotFound';
 import Modal from 'react-modal';
-import axios from 'axios';
-import { useHistory } from 'react-router-dom';
 
 Modal.setAppElement('#root'); // App element olarak root elementini kullanıyoruz
 
