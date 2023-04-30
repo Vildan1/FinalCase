@@ -15,21 +15,6 @@ Modal.setAppElement('#root'); // required for modal
 const App = () => {
   const queryClient = new QueryClient();
   const [loading, setLoading] = React.useState(true);
- 
-// axios.interceptors.response.use(
-//     response => {
-//       return response;
-//     },
-//     error => {
-//       if (error.response.status === 404) {
-//         // eğer sayfa bulunamadıysa, NotFound sayfasına yönlendir
-//         alert(1)
-
-//       }
-//       return Promise.reject(error);
-//     }
-//   );
-
 
   useEffect(() => {
     const timer = setTimeout(() => {
