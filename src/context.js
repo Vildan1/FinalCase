@@ -8,11 +8,12 @@ const AppProvider = ({ children }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(true);
   const [resultTitle, setResultTitle] = useState("");
-
+ 
   const fetchStarShips = useCallback(
     async ({ pageParam = 1 }) => {
       setLoading(true);
       try {
+        // Aşağıdaki kod bloğu, axios kütüphanesini kullanarak API'den veri çekiyor.
         const response = await axios.get(
           `${BASE_URL}?search=${searchTerm}&page=${pageParam}`
         );
@@ -60,7 +61,7 @@ const AppProvider = ({ children }) => {
     },
     [searchTerm]
   );
-
+//   Aşağıdaki kod bloğu, useInfiniteQuery hook'unu kullanarak sayfalama işlemlerini gerçekleştiriyor.
   const {
     data,
     error,

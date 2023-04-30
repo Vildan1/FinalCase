@@ -6,7 +6,9 @@ import List from '../../components/StarshipsList/StarshipsList';
 
 const Home = () => {
   
+
   return (
+    //
     <main >    
         <Header />
         <List />
