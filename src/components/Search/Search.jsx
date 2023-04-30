@@ -8,12 +8,12 @@ const Search = () => {
 
   useEffect(() => searchText.current.focus(), []);
 
-  
+  // Form submit edildiğinde tetiklenir ve arama yapar 
   const handleSubmit = (e) => {
     e.preventDefault();
     const tempSearchTerm = searchText.current.value.trim();
 
-    if (tempSearchTerm.replace(/[^\w\s]/gi, '').length === 0) {
+    if (!tempSearchTerm.replace(/[^\w\s]/gi, '')) {
       setSearchTerm('');
       setResultTitle('Please Enter Something ...');
 
@@ -23,12 +23,14 @@ const Search = () => {
 
     }
 
-    // Kullanımı burada
+    //  "useGlobalContext" kancası aracılığıyla üst bileşenden aktarılan bir işlev olan "fetchNextPage" işlevini de çağırır.
+    // Bu işlev, arama sonuçlarının bir sonraki sayfasını getirmekten sorumludur.
     fetchNextPage();
     
   };
 
   return (
+    
     <div className='search-form'>
       <div className='container'>
         <div className='search-form-content'>

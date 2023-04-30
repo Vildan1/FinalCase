@@ -13,7 +13,7 @@ const AppProvider = ({ children }) => {
     async ({ pageParam = 1 }) => {
       setLoading(true);
       try {
-        // Aşağıdaki kod bloğu, axios kütüphanesini kullanarak API'den veri çekiyor.
+        // Veriler, axios kitaplığı kullanılarak alınır .
         const response = await axios.get(
           `${BASE_URL}?search=${searchTerm}&page=${pageParam}`
         );
@@ -45,7 +45,7 @@ const AppProvider = ({ children }) => {
           };
         });
 
-        if (newStarShip.length > 0) {
+        if (newStarShip?.length > 0) {
           setResultTitle("");
         } else {
           setResultTitle("No Search Result Found!");
@@ -61,7 +61,7 @@ const AppProvider = ({ children }) => {
     },
     [searchTerm]
   );
-//   Aşağıdaki kod bloğu, useInfiniteQuery hook'unu kullanarak sayfalama işlemlerini gerçekleştiriyor.
+//  tepki sorgulama kitaplığından useInfiniteQuery kancası kullanılarak sayfalandırılır.
   const {
     data,
     error,
@@ -72,7 +72,7 @@ const AppProvider = ({ children }) => {
 
   } = useInfiniteQuery(["starships", searchTerm], fetchStarShips, {
     getNextPageParam: (lastPage, allPages) => {
-      if (lastPage.newStarShip.length === 0) {
+      if (lastPage?.newStarShip?.length === 0) {
         return null;
       } else {
         return lastPage.next;
@@ -88,7 +88,7 @@ const AppProvider = ({ children }) => {
   useEffect(() => {
     if (error) {
       setResultTitle(`Error: ${error.message}`);
-    } else if (data && starShips.length === 0) {
+    } else if (data && starShips?.length === 0) {
       setResultTitle("No Search Result Found!");
     }
   }, [error, data, starShips]);
@@ -111,7 +111,7 @@ const AppProvider = ({ children }) => {
     </AppContext.Provider>
   );
 };
-
+ // useGlobalContext kancası kullanılarak AppContext içeriği alınır.
 export const useGlobalContext = () => {
   return useContext(AppContext);
 };

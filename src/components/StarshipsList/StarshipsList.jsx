@@ -7,7 +7,7 @@ import { animateScroll as scroll } from "react-scroll";
 
 const StarshipsList = () => {
 
-
+  // Kaydırma animasyonu
   function scrollToBottom() {
     scroll.scrollToBottom({
       duration: 500, // Animasyon süresi
@@ -15,6 +15,7 @@ const StarshipsList = () => {
       smooth: "easeInOutQuart", // Animasyon tipi
     });
   }
+  //  "useGlobalContext" kancasını kullanarak genel bağlamdan veri ve durum değerlerini alıyorum.
   const {
     starShips,
     loading,
@@ -28,7 +29,7 @@ const StarshipsList = () => {
 
   if (loading) return <Loading />;
 
-
+ // 40 starships göster
   return (
     <section className='starships'>
       <div className='container'>

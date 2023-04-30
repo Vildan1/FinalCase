@@ -9,23 +9,37 @@ import List from './components/StarshipsList/StarshipsList';
 import LoadingScreen from './components/Loader/LoadingScreen';
 import NotFound from './pages/NotFound/NotFound';
 import Modal from 'react-modal';
+import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 Modal.setAppElement('#root'); // App element olarak root elementini kullanıyoruz
 
 const App = () => {
   const queryClient = new QueryClient();
   const [loading, setLoading] = React.useState(true);
-  
+ 
+// axios.interceptors.response.use(
+//     response => {
+//       return response;
+//     },
+//     error => {
+//       if (error.response.status === 404) {
+//         // eğer sayfa bulunamadıysa, NotFound sayfasına yönlendir
+//         alert(1)
+
+//       }
+//       return Promise.reject(error);
+//     }
+//   );
+
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2000); // 10 saniye gecikme
     return () => clearTimeout(timer);
   }, []);
-  if (loading) {
-    return <LoadingScreen />;
-  }
-
+  
   return (
     <QueryClientProvider client={queryClient}>
       <AppProvider>
