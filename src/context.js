@@ -1,6 +1,7 @@
-import axios from "axios";
+
 import { useInfiniteQuery } from "react-query";
 import React, { useState, useContext, useEffect, useCallback } from "react";
+import axios from "axios";
 const AppContext = React.createContext();
 const BASE_URL = "https://swapi.dev/api/starships/";
 
@@ -71,7 +72,7 @@ const AppProvider = ({ children }) => {
     isFetchingNextPage,
 
   } = useInfiniteQuery(["starships", searchTerm], fetchStarShips, {
-    getNextPageParam: (lastPage, allPages) => {
+    getNextPageParam: (lastPage) => {
       if (lastPage?.newStarShip?.length === 0) {
         return null;
       } else {
