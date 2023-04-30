@@ -8,9 +8,6 @@ import Home from './pages/Home/Home';
 import List from './components/StarshipsList/StarshipsList';
 import LoadingScreen from './components/Loader/LoadingScreen';
 import NotFound from './pages/NotFound/NotFound';
-import Modal from 'react-modal';
-
-Modal.setAppElement('#root'); // App element olarak root elementini kullanıyoruz
 
 const App = () => {
   const queryClient = new QueryClient();

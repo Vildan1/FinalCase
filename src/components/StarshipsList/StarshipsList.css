@@ -70,6 +70,7 @@
 .starshipsContent{
   display: grid;
   gap: 2rem;
+  padding: 10px;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 }
 
@@ -124,7 +125,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  font-size: 10px;
+ 
 }
 
 .starshipsItemInfoItem.title a {
@@ -162,7 +163,7 @@
 
 
 .text-item {
-  font-size: 14px;
+  font-size: 11px;
   color: #ffffff;
   display: flex;
   justify-content: center;
@@ -184,7 +185,10 @@
   justify-content: center;
 
 }
+.starshipsList{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px 0px;
 
+}
 .modal-content {
   width: 50%;
   margin: auto;

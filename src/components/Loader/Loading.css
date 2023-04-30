@@ -19,7 +19,6 @@
     pointer-events: none; /* tıklamayı engelle */
   }
   
-  
   .loading-img-container {
     position: relative;
     width: 100%; /* genişliği ayarla */

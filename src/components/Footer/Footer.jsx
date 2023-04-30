@@ -12,16 +12,16 @@ const Footer = () => {
           <p>A web developer and designer based in Istanbul, Turkey.</p>
 
           <div className='footer-social'>
-            <a href='https://www.facebook.com/'>
+            <a className='facebook' href='https://www.facebook.com/'>
               <FontAwesomeIcon icon={faFacebookF} />
             </a>
-            <a href='https://twitter.com/'>
+            <a className='twitter' href='https://twitter.com/vildanakbulutt'>
               <FontAwesomeIcon icon={faTwitter} />
             </a>
-            <a href='https://www.instagram.com/'>
+            <a className='instagram' href='https://www.instagram.com/vildanakbulut_/'>
               <FontAwesomeIcon icon={faInstagram} />
             </a>
-            <a href='https://www.linkedin.com/in/vildanakbulutt/'>
+            <a className='linkedin' href='https://www.linkedin.com/in/vildanakbulutt/'>
               <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
           </div>

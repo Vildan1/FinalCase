@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useInfiniteQuery } from "react-query";
 import React, { useState, useContext, useEffect, useCallback } from "react";
+
 const AppContext = React.createContext();
 const BASE_URL = "https://swapi.dev/api/starships/";
 
@@ -43,12 +44,15 @@ const AppProvider = ({ children }) => {
             cargo_capacity: cargo_capacity,
           };
         });
-
+        
         if (newStarShip.length > 0) {
           setResultTitle("");
-        } else {
+        } 
+       
+        else {
           setResultTitle("No Search Result Found!");
         }
+
 
         setLoading(false);
         return { newStarShip, next };
